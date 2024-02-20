@@ -1,0 +1,29 @@
+body {
+    background-color: #000000; /* Sets the background color of the body */
+}
+
+.star {
+    position: fixed; /* Fixes the stars' position on the screen */
+    pointer-events: none; /* Ensures stars don't interfere with mouse events */
+}
+
+.star:before,
+.star:after {
+    position: absolute; /* Positions the stars */
+    top: 0;
+    left: 0;
+    content: '\2726'; /* Unicode character for a star */
+    font-size: 9px; /* Sets the font size of the star */
+}
+
+.star:before {
+    color: transparent; /* Sets the color of the star to transparent */
+    text-shadow: 0 0 3px rgb(0, 0, 0); /* Adds a text shadow to create a glowing effect */
+}
+
+.star:after {
+    background: rgb(0, 217, 255); /* Sets the background color of the star */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Sets the color of the text to transparent */
+}
